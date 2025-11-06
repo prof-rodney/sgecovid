@@ -15,5 +15,6 @@ namespace Config
 
     const string CRYPTO_KEY = "SGECOVID_2025";
 
+    // Interface
     bool ensureDirectories();
 } // namespace Config
