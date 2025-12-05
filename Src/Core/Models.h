@@ -2,28 +2,24 @@
 #include <string>
 #include <vector>
 
-using namespace std;
+enum class Role { User, Admin };
 
-enum class Role { User, Admin};
-
-struct User
-{
-    string username;
-    string passwordCipher;
+struct User {
+    std::string username;
     Role role;
+    std::string passwordCipher;
 };
 
-struct Patient
-{
-    string nome;
-    string cpf;
-    string endereco;
-    string cidade;
-    string bairro;
-    string cep;
-    string dataNascimento; 
-    string dataDiagnostico;
-    string email;
-    vector<string> comorbidades;
-    string comorbidadesTextoLivre;
+struct Patient {
+    std::string nome;
+    std::string cpf;
+    std::string endereco;
+    std::string cidade;
+    std::string bairro;
+    std::string cep;
+    std::string dataNascimento;
+    std::string dataDiagnostico;
+    std::string email;
+    std::vector<std::string> comorbidades;
+    std::string comorbidadesTextoLivre;
 };

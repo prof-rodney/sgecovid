@@ -1,20 +1,16 @@
 #pragma once
 #include <string>
 
-using namespace std;
+namespace Config {
+    extern const std::string DATA_ROOT;
+    extern const std::string PACIENTES_DIR;
+    extern const std::string RELATORIOS_DIR;
+    extern const std::string SEGURANCA_DIR;
 
-namespace Config
-{
-    const string DATA_ROOT = "Data";
-    const string PACIENTES_DIR = DATA_ROOT + string("/Repository");
-    const string RELATORIOS_DIR = DATA_ROOT + string("/Report");
-    const string SEGURANCA_DIR = DATA_ROOT + string("/Security");
+    extern const std::string USERS_FILE;
+    extern const std::string LISTA_COMORBIDADE_FILE;
 
-    const string USERS_FILE = SEGURANCA_DIR + string("/users.txt");
-    const string LISTA_COMORBIDADE_FILE = RELATORIOS_DIR + string("/listacomorbidade.txt");
+    extern const std::string CRYPTO_KEY;
 
-    const string CRYPTO_KEY = "SGECOVID_2025";
-
-    // Interface
     bool ensureDirectories();
-} // namespace Config
+}
